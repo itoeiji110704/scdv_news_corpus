@@ -1,0 +1,13 @@
+version: '2'
+services:
+  pyenv:
+    build:
+      context: ./
+      shm_size: "1gb"
+    command:
+      "sleep infinity"
+    environment:
+      - TZ=Asia/Tokyo
+    volumes:
+      - ./:/project
+    network_mode: "host"
